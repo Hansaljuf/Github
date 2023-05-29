@@ -1,4 +1,4 @@
-package com.example.github.ui.detail
+package com.example.github.ui.detail.follower
 
 import android.util.Log
 import androidx.lifecycle.LiveData

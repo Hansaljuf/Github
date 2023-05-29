@@ -1,4 +1,4 @@
-package com.example.github.ui.detail
+package com.example.github.ui.adapter
 
 import android.content.Context
 import android.os.Bundle
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.github.R
+import com.example.github.ui.detail.follower.FollowersFragment
+import com.example.github.ui.detail.following.FollowingFragment
 
 class SectionPagerAdapter(private val mCtx: Context, fm: FragmentManager, data: Bundle) : FragmentPagerAdapter(fm,  BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 

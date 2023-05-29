@@ -9,7 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.github.databinding.ActivityMainBinding
 import com.example.github.model.User
-import com.example.github.ui.detail.DetailUserActivity
+import com.example.github.ui.adapter.UserAdapter
+import com.example.github.ui.detail.user.DetailUserActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding

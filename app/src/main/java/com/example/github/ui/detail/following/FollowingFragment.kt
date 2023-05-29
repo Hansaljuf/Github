@@ -1,4 +1,4 @@
-package com.example.github.ui.detail
+package com.example.github.ui.detail.following
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.github.R
 import com.example.github.databinding.FragmentFollowBinding
-import com.example.github.ui.main.UserAdapter
+import com.example.github.ui.detail.user.DetailUserActivity
+import com.example.github.ui.adapter.UserAdapter
 
 class FollowingFragment: Fragment(R.layout.fragment_follow) {
 
@@ -35,7 +36,8 @@ class FollowingFragment: Fragment(R.layout.fragment_follow) {
         }
 
         showLoading(true)
-        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(FollowingViewModel::class.java)
+        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
+            FollowingViewModel::class.java)
         viewModel.setListFollowing(username)
         viewModel.getListFollowing().observe(viewLifecycleOwner) {
             if (it != null) {

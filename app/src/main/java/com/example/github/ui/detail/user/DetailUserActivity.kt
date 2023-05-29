@@ -1,12 +1,12 @@
-package com.example.github.ui.detail
+package com.example.github.ui.detail.user
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.example.github.R
 import com.example.github.databinding.ActivityDetailUserBinding
+import com.example.github.ui.adapter.SectionPagerAdapter
 
 class DetailUserActivity : AppCompatActivity() {
 
@@ -26,7 +26,8 @@ class DetailUserActivity : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putString(EXTRA_USERNAME, username)
 
-        viewModel = ViewModelProvider (this, ViewModelProvider.NewInstanceFactory()).get(DetailUserViewModel::class.java)
+        viewModel = ViewModelProvider (this, ViewModelProvider.NewInstanceFactory()).get(
+            DetailUserViewModel::class.java)
 
         if (username != null) {
             viewModel.setUserDetail(username)
